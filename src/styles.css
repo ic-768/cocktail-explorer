@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root{
+ padding:red;
+}
+
+*{
+	font-family: 'Noto Sans', sans-serif;
+	color:white;padding:0px; margin:0px;}
+
+table,th,td{
+	border:1px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+.Banner{
+	display:flex;
+	flex-direction:column;
+	padding-top:15px;
+	padding-bottom: 25px;
+	width: 100%;
+	height: 100px;
+	background-image: linear-gradient(to bottom, white, #b535a0)
+}
+
+.logoContainer{
+background-color: white;
+border-radius: 50%;
+width: 100px;
+margin-left:50px
+}
+
+.pageContainer{
+		width:100%;
+		height:100vh;
+		display:flex;
+		flex-direction:column;
+		align-items: center; 
+}
+
+.contentContainer{
+		width:100%;
+		display:flex;
+		flex-grow:1;
+		flex-direction:column;
+		align-items: center; 
+}
+
+.DrinkView{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+}
+
+@keyframes pillFill{
+	0%{background-position:right ;}
+	50%{background-position:5% ;}
+	75%{background-position:15% ;}
+	100%{background-position:left ;} 
+}
+
+@keyframes pillEmpty{
+	0%{background-position:left ;}
+	50%{background-position:95% ;}
+	75%{background-position:85% ;}
+	100%{background-position:right ;} 
+}
+
+
+.pillButton{ 
+	cursor:pointer;
+	color:white;
+	border-radius:80px;
+	height:50px;
+	width:210px; 
+	margin-top:150px;
+	background: linear-gradient(to right, white 50%, purple 50%);
+	background-size: 200% 100%; 
+	background-position:left; 
+	animation:pillEmpty 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+.pillButton:hover{
+	color:black;
+	animation:pillFill 0.5s ease-in-out;
+}
+
+
+@media (max-width: 545px) {  /* screen<=545*/
+	.pillButton.homeButton{
+		margin-top:80px;
+	}
+}
+
+@media (max-width: 472px) {  /* screen<=472 SMALLEST VALUE*/
+	.pillButton.homeButton{
+		margin-top:40px;
+	} 
+	.homeContent{
+		padding-top:0px;
+	} 
+
+.Banner{
+	align-items:center;
+}
+
+.logoContainer{
+	margin-left:0px; 
+} 
+} 
+
+@media (min-width: 546px) {  /* screen>=576 LARGEST VALUES*/ 
+	.homeContent{
+		padding-top:70px;
+	}
+	.homeTitle{
+		font-size:40px; 
+	} 
+} 
